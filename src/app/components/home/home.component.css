@@ -1,0 +1,16 @@
+.styleMenuPrincipal {
+    margin: 5px;
+    font-weight: bold;
+    font-size: 16;
+}
+
+.styleTitleIcons{
+    color: white;
+    font-size: 2.5rem;
+    margin-right:15px
+
+}
+
+.styleDivMenu{
+    text-align: center;
+}

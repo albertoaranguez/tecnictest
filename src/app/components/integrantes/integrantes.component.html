@@ -1,0 +1,53 @@
+<div>
+        <a href="/newuser">
+            <p-button class="styleMenuPrincipal" pTooltip="Agregar integrante" label="">
+                <i class="pi pi-user-plus styleTitleIcons"></i>
+            </p-button> 
+        </a>
+</div>
+
+<div>
+    <p-table [value]="listIntegrantes"
+              class="StyleTable" 
+              [paginator]="true"
+                [rows]="5"
+                [showCurrentPageReport]="true"
+                [tableStyle]="{ 'min-width': '50rem' }"
+                currentPageReportTemplate="Mostrando {first} al {last} de {totalRecords} registros"
+                [rowsPerPageOptions]="[5, 10, 20]"
+              >
+        <ng-template pTemplate="header">
+            <tr>
+                <th style="widith:20%">DNI</th>
+                <th style="widith:20%">Nombre</th>
+                <th style="widith:20%">Edad</th>
+                <th style="widith:20%">Telefono</th>
+                <th style="widith:20%">Acciones</th>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="body" let-product>
+            <tr>
+                <td>{{ product.DNI}}</td>
+                <td>{{ product.Apellido }}, {{ product.Nombre }}</td>
+                <td>{{ product.Edad }}</td>
+                <td>{{ product.Telefono }}</td>
+                <td>
+                    <p-button class="btn-accion" (click)="dirEdit(product)" pTooltip="Editar" label=""  severity="warning">
+                        <i class="pi pi-user-edit"></i>
+                    </p-button>
+                    <p-button class="btn-accion"  (click)="confirmEliminarRegistro(product)" pTooltip="Eliminar" label=""  severity="danger">
+                        <i class="pi pi-trash"></i>
+                    </p-button> 
+                </td>
+            </tr>
+        </ng-template>
+        <ng-template pTemplate="paginatorleft">
+            <p-button type="button" icon="pi pi-plus" styleClass="p-button-text"></p-button>
+        </ng-template>
+        <ng-template pTemplate="paginatorright">
+            <p-button type="button" icon="pi pi-cloud" styleClass="p-button-text"></p-button>
+        </ng-template>
+    </p-table>
+</div>
+
+

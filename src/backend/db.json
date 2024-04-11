@@ -1,0 +1,77 @@
+{
+  "tiposIntegrante": [
+    {
+      "id_tipo": "1",
+      "n_tipo": "Director",
+      "id": "2986"
+    },
+    {
+      "id_tipo": "2",
+      "n_tipo": "Profesor",
+      "id": "e8f2"
+    },
+    {
+      "id_tipo": "3",
+      "n_tipo": "Alumno",
+      "id": "bc8a"
+    }
+  ],
+  "integrantes": [
+    {
+      "id": "3",
+      "Apellido": "González",
+      "Nombre": "María",
+      "DNI": "29874632",
+      "Telefono": "3516523874",
+      "Edad": "48",
+      "idTipoIntegrante": "2",
+      "Email": "algo@algo.com"
+    },
+    {
+      "id": "1f4a",
+      "DNI": "36451475",
+      "Nombre": "algo",
+      "Apellido": "degrandis",
+      "Edad": "44",
+      "Email": "algo@algo.com",
+      "Telefono": "3544124578"
+    },
+    {
+      "id": "1",
+      "Apellido": "Tomazzo",
+      "Nombre": "Aurelio",
+      "DNI": "12457124",
+      "Telefono": "3514512457",
+      "Edad": "45",
+      "idTipoIntegrante": "1",
+      "Email": "algo@algo.com"
+    },
+    {
+      "id": "1f4a",
+      "DNI": "36451475",
+      "Nombre": "algo",
+      "Apellido": "degrandis",
+      "Edad": "44",
+      "Email": "algo@algo.com",
+      "Telefono": "3544124578"
+    },
+    {
+      "id": "1",
+      "Apellido": "Tomazzo",
+      "Nombre": "Aurelio",
+      "DNI": "12457124",
+      "Telefono": "3514512457",
+      "Edad": "46",
+      "idTipoIntegrante": "1"
+    },
+    {
+      "id": "285b",
+      "DNI": "25451151",
+      "Nombre": "alejandia",
+      "Apellido": "rosalia",
+      "Edad": "77",
+      "Email": "adf@hotmail.com",
+      "Telefono": "3514521551"
+    }
+  ]
+}

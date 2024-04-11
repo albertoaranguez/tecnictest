@@ -1,0 +1,9 @@
+.TituloPrincipal {
+    color: white;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+}
+.StileDivTitulo{
+    background-color: purple;
+}

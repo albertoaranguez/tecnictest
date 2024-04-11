@@ -1,0 +1,41 @@
+
+
+.styleForm{
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 4, 0.8);
+}
+.text-danger {
+    color: red;
+    font-size: 10px;
+}
+.formulario-container {
+    max-width: 600px; 
+    margin: 0 auto; 
+    padding: 20px; 
+  }
+
+  .StyleImput{
+    margin-bottom: 20px; 
+  }
+  .short-input {
+    width: 80px; /* Ajusta el valor según lo que consideres corto */
+  }
+
+  .StyleImput label {
+    display: block; /* Hacer que las etiquetas ocupen toda la anchura del div */
+    font-weight: bold; /* Hacer que las etiquetas sean negritas */
+}
+
+  .mi-formulario .p-field label {
+    display: block; /* para que cada label ocupe su propia línea */
+    font-size: 16px; /* tamaño de fuente */
+    font-weight: bold; /* peso de fuente en negrita */
+    margin-bottom: 8px; /* espacio entre cada label y el campo de entrada */
+    color: #333; /* color de texto */
+  }
+
+  .button-save{
+    text-align: right;
+  }

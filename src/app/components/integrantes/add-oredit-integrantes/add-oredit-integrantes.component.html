@@ -1,0 +1,128 @@
+<p class="styleTitle">{{titulo}}</p>
+
+
+<hr>
+
+<div>
+    <div class="formulario-container">
+        <form #userForm="ngForm" class="styleForm p-grid " >
+            <div class="p-col-12 p-md-4 form-group StyleImput">
+                <label class="form-label" for="Dni">DNI</label>
+                <input pInputText 
+                        type="text" 
+                        name="Dni" 
+                        id="dni"
+                        pattern="^\d{8}$"
+                        maxlength="8" 
+                        #userDni="ngModel" 
+                        [(ngModel)]="usr.DNI" 
+                        placeholder="99999999"
+                        class="form-control" 
+                        required/>
+                        <div class="text-danger" *ngIf="userDni.invalid && (userDni.touched || userDni.dirty) || isFormSubmited">
+                            <span *ngIf="userDni.errors?.['required']">Requerido</span>
+                            <span *ngIf="userDni.errors?.['pattern']">Dni no valido</span>
+                        </div>
+
+            </div>
+            <div class="p-col-12 p-md-4 form-group StyleImput">
+                <label class="form-label" for="nombre">Nombre</label>
+                <input pInputText 
+                        type="text" 
+                        name="Nombre" 
+                        id="nombre"
+                        #userName ="ngModel" 
+                        [(ngModel)]="usr.Nombre" 
+                        placeholder="Ingrese nombre"
+                        class="form-control" 
+                        required>
+                        <div class="text-danger" *ngIf="userName.invalid && (userName.touched || userName.dirty) || isFormSubmited">
+                            <span *ngIf="userName.errors?.['required']">Requerido</span>
+                        </div>
+
+            </div>
+            <div class="p-col-12 p-md-4 form-group StyleImput">
+                <label class="form-label" for="apellido">Apellido</label>
+                <input pInputText 
+                        type="text" 
+                        name="Apellido" 
+                        id="apellido"
+                        #userSurname ="ngModel" 
+                        [(ngModel)]="usr.Apellido" 
+                        placeholder="Ingrese apellido"
+                        class="form-control" 
+                        required>
+                        <div class="text-danger" *ngIf="userSurname.invalid && (userSurname.touched || userSurname.dirty) || isFormSubmited">
+                            <span *ngIf="userSurname.errors?.['required']">Requerido</span>
+                        </div>
+
+            </div>
+            <div class="p-col-12 p-md-4 form-group StyleImput">
+                <label class="form-label" for="edad">Edad</label>
+                <input pInputText 
+                        type="text" 
+                        name="Edad" 
+                        id="edad"
+                        #userAge ="ngModel" 
+                        [(ngModel)]="usr.Edad" 
+                        placeholder="99"
+                        pattern="[1-9][0-9]?"
+                        class="form-control short-input"
+                        maxlength="2" 
+                        required/>
+                        <div class="text-danger" *ngIf="userAge.invalid && (userAge.touched || userAge.dirty) || isFormSubmited">
+                            <span *ngIf="userAge.errors?.['required']">Requerido</span>
+                            <span *ngIf="userAge.errors?.['pattern']">Edad no valida</span>
+                        </div>
+
+            </div>
+            <div class="p-col-12 p-md-4 form-group StyleImput">
+                <label class="form-label" for="email">Email</label>
+                <input pInputText 
+                        type="text" 
+                        name="Email" 
+                        id="email"
+                        #email ="ngModel" 
+                        [(ngModel)]="usr.Email" 
+                        placeholder="Ingrese email"
+                        pattern="[a-zA-Z0-9.-_]{1,}@[a-zA-Z.-]{2,}[.]{1}[a-zA-Z]{2,}"
+                        class="form-control" 
+                        required>
+                        <div class="text-danger" *ngIf="email.invalid && (email.touched || email.dirty) || isFormSubmited">
+                            <span *ngIf="email.errors?.['required']">Requerido</span>
+                            <span *ngIf="email.errors?.['pattern']">Email no válido</span>
+                        </div>         
+
+            </div>
+            <div class="p-col-12 p-md-4 form-group StyleImput">
+                <label class="form-label" for="telefono">Telefono</label>
+                <input pInputText 
+                        type="text" 
+                        name="Telefono" 
+                        id="telefono"
+                        pattern="^\d{10}$"
+                        maxlength="10" 
+                        #userTel="ngModel" 
+                        [(ngModel)]="usr.Telefono" 
+                        placeholder="Ingrese telefono sin 0 ni 15"
+                        class="form-control" 
+                        required/>
+                        <div class="text-danger" *ngIf="userTel.invalid && (userTel.touched || userTel.dirty) || isFormSubmited">
+                            <span *ngIf="userTel.errors?.['required']">Requerido</span>
+                            <span *ngIf="userTel.errors?.['pattern']">Telefono no valido</span>
+                        </div>
+
+            </div>
+
+            <div class="p-col-12">
+                <p-button  
+                         (click)="onSubmit(userForm)"
+                        pTooltip="Guardar" label="Guardar">
+                        <i class="pi pi-save styleTitleIcons"></i>
+                </p-button> 
+                
+              </div>
+        </form>
+    </div>
+</div>
+
